@@ -6,13 +6,19 @@
 #include "xml_vehicle_list_reader.h"
 #include <QtXml>
 #include <iostream>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QPushButton>
 
 Leitstelle::Leitstelle() {
+
+  this->init();
+  QGridLayout *layout_vehicles_fire = this->m_vehicle_window.findChild<QGridLayout *>("gridLayoutVehiclesFire");
+  QPushButton *btn = new QPushButton;
+  layout_vehicles_fire->addWidget(btn, 3, 3);
+
   this->m_main_window.setWindowState(Qt::WindowMaximized);
   this->m_vehicle_window.setWindowState(Qt::WindowMaximized);
   this->m_vehicle_window.show();
-
-  this->init();
 }
 
 int Leitstelle::init() {
@@ -30,6 +36,12 @@ int Leitstelle::read_vehicles_from_xml() {
   XmlVehicleListReader::read(&file, this->m_vehicles_fire, this->m_vehicles_ems);
   std::cout << "number of fire vehicles: " << this->m_vehicles_fire.size() << std::endl;
   std::cout << "number of ems vehicles: " << this->m_vehicles_ems.size() << std::endl;
+  for (auto const& entry : this->m_vehicles_fire) {
+    std::cout << entry.first  // key
+              << " : "
+              << entry.second.get()->get_status() // value
+              << std::endl ;
+  }
 }
 
 Leitstelle::~Leitstelle() = default;
