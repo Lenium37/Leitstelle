@@ -1,0 +1,34 @@
+<vehicles>
+	<fire>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. LGF</cityCallout>
+			<vehicleCallout>1-DLK</vehicleCallout>
+			<vehicleType>DLK(A) 23-12</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+		</vehicle>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. LGF</cityCallout>
+			<vehicleCallout>1-LF10</vehicleCallout>
+			<vehicleType>LF 10</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+		</vehicle>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. LGF</cityCallout>
+			<vehicleCallout>1-MTF-2</vehicleCallout>
+			<vehicleType>MTF</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+		</vehicle>
+	</fire>
+	<ems>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. LGF</cityCallout>
+			<vehicleCallout>1-KTW-2</vehicleCallout>
+			<vehicleType>KTW</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+		</vehicle>
+	</ems>
+</vehicles>
