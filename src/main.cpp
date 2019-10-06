@@ -4,6 +4,7 @@
 
 #include "main_window.h"
 #include "vehicle_window.h"
+#include "leitstelle.h"
 #include <QApplication>
 #include <QtCore/QFile>
 
@@ -17,11 +18,7 @@ int main(int argc, char *argv[]) {
   QString StyleSheet = QLatin1String(File.readAll());
   a.setStyleSheet(StyleSheet);
 
-  MainWindow w;
-  w.setBaseSize(1920, 1080);
-  w.show();
-  VehicleWindow w2;
-  w2.show();
+  auto* leitstelle = new Leitstelle();
 
   return QApplication::exec();
 }

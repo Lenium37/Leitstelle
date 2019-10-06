@@ -8,16 +8,24 @@ set(CMAKE_AUTOUIC ON)
 
 # Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
+# Find the QXml library
+find_package(Qt5Xml REQUIRED)
 
 set(main_headers
         vehicle_window.h
         main_window.h
+        vehicle.h
+        leitstelle.h
+        xml_vehicle_list_reader.h
         )
 
 set(main_srcs
         main.cpp
         main_window.cpp
         vehicle_window.cpp
+        vehicle.cpp
+        leitstelle.cpp
+        xml_vehicle_list_reader.cpp
         )
 
 set(main_ui
@@ -46,4 +54,4 @@ add_executable(${UI_EXECUTABLE_NAME}
 install(TARGETS ${UI_EXECUTABLE_NAME} DESTINATION bin)
 
 
-target_link_libraries(${UI_EXECUTABLE_NAME} Qt5::Widgets)
+target_link_libraries(${UI_EXECUTABLE_NAME} Qt5::Widgets Qt5::Xml)

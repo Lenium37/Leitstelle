@@ -6,6 +6,7 @@
 			<vehicleCallout>1-DLK</vehicleCallout>
 			<vehicleType>DLK(A) 23-12</vehicleType>
 			<vehicleStatus>2</vehicleStatus>
+			<positionInList>3</positionInList>
 		</vehicle>
 		<vehicle>
 			<enabled>1</enabled>
@@ -13,6 +14,7 @@
 			<vehicleCallout>1-LF10</vehicleCallout>
 			<vehicleType>LF 10</vehicleType>
 			<vehicleStatus>2</vehicleStatus>
+			<positionInList>8</positionInList>
 		</vehicle>
 		<vehicle>
 			<enabled>1</enabled>
@@ -20,6 +22,7 @@
 			<vehicleCallout>1-MTF-2</vehicleCallout>
 			<vehicleType>MTF</vehicleType>
 			<vehicleStatus>2</vehicleStatus>
+			<positionInList>20</positionInList>
 		</vehicle>
 	</fire>
 	<ems>
@@ -29,6 +32,7 @@
 			<vehicleCallout>1-KTW-2</vehicleCallout>
 			<vehicleType>KTW</vehicleType>
 			<vehicleStatus>2</vehicleStatus>
+			<positionInList>12</positionInList>
 		</vehicle>
 	</ems>
 </vehicles>

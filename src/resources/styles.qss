@@ -28,3 +28,6 @@
 #pushButtonStatusAlle {
 	/*background-color: rgb(255, 0, 0);*/
 }
+#pushButtonStatus0, #pushButtonStatus1, #pushButtonStatus2, #pushButtonStatus3, #pushButtonStatus4, #pushButtonStatus5, #pushButtonStatus6, #pushButtonStatus7, #pushButtonStatus8, #pushButtonStatusAlle {	
+	font-size: 20px;
+}
