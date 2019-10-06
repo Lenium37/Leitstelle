@@ -33,5 +33,6 @@
 
 
 # CLion / CMake
-.idea
+.idea/
 cmake-build-debug/
+build/
