@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>761</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -233,6 +233,18 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <layout class="QGridLayout" name="gridLayoutVehiclesFire">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
           <item row="3" column="0">
            <spacer name="horizontalSpacer_2">
             <property name="orientation">
@@ -363,31 +375,22 @@
             </property>
            </spacer>
           </item>
-          <item row="2" column="2">
-           <widget class="QLabel" name="label_2">
-            <property name="text">
-             <string>DLK</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>LF10</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="4">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>MTF</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item>
          <layout class="QGridLayout" name="gridLayoutVehiclesEms">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
           <item row="2" column="0">
            <spacer name="horizontalSpacer_12">
             <property name="orientation">
@@ -491,13 +494,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-          <item row="3" column="1">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>KTW</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </item>

@@ -31,3 +31,12 @@
 #pushButtonStatus0, #pushButtonStatus1, #pushButtonStatus2, #pushButtonStatus3, #pushButtonStatus4, #pushButtonStatus5, #pushButtonStatus6, #pushButtonStatus7, #pushButtonStatus8, #pushButtonStatusAlle {	
 	font-size: 20px;
 }
+VehicleLabel {
+	qproperty-alignment: AlignCenter;
+	background-color: rgb(100, 100, 100);
+	max-width: 150px;
+	max-height: 75px;
+	min-width: 120px;
+	min-height: 60px;
+	font-size: 15px;
+}

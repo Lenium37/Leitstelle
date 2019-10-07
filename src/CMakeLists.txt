@@ -17,6 +17,8 @@ set(main_headers
         vehicle.h
         leitstelle.h
         xml_vehicle_list_reader.h
+        vehicle_label.h
+        vehicle_label_menu.h
         )
 
 set(main_srcs
@@ -26,6 +28,8 @@ set(main_srcs
         vehicle.cpp
         leitstelle.cpp
         xml_vehicle_list_reader.cpp
+        vehicle_label.cpp
+        vehicle_label_menu.cpp
         )
 
 set(main_ui

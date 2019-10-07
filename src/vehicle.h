@@ -55,6 +55,7 @@ class Vehicle {
   void set_name(const std::string& name);
 
   const VehicleType get_type();
+  const std::string get_type_string();
   void set_type(const std::string& type);
 
   const VehicleStatus get_status();

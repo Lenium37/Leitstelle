@@ -12,9 +12,11 @@ Vehicle::Vehicle() {
 
 Vehicle::Vehicle(bool enabled, const std::string& city_callout, const std::string& vehicle_callout, const std::string& type, const int& status, const int &position_in_list)
   : m_enabled(enabled), m_position_in_list(position_in_list) {
-    this->set_name(city_callout + " " + vehicle_callout);
-    this->set_type(type);
-    this->set_status(status);
+  this->m_city_callout = city_callout;
+  this->m_vehicle_callout = vehicle_callout;
+  this->set_name(city_callout + " " + vehicle_callout);
+  this->set_type(type);
+  this->set_status(status);
 }
 
 Vehicle::~Vehicle() = default;
@@ -29,6 +31,17 @@ void Vehicle::set_name(const std::string& name) {
 
 const VehicleType Vehicle::get_type() {
   return this->m_type;
+}
+
+const std::string Vehicle::get_type_string() {
+  if(this->m_type == VehicleType::DLK23)
+    return "DLK23";
+  else if(this->m_type == VehicleType::LF10)
+    return "LF10";
+  else if(this->m_type == VehicleType::MTF)
+    return "MTF";
+  else if(this->m_type == VehicleType::KTW)
+    return "KTW";
 }
 
 void Vehicle::set_type(const std::string& type) {
