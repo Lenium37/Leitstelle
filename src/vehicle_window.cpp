@@ -7,10 +7,52 @@
 #include "ui_vehicle_window.h"
 
 VehicleWindow::VehicleWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::VehicleWindow)
-{
-    ui->setupUi(this);
+    QMainWindow(parent), ui(new Ui::VehicleWindow) {
+  ui->setupUi(this);
+  ui->gridLayoutVehiclesFire->setColumnStretch(0, 1);
+  ui->gridLayoutVehiclesFire->setColumnStretch(1, 1);
+  ui->gridLayoutVehiclesFire->setColumnStretch(2, 1);
+  ui->gridLayoutVehiclesFire->setColumnStretch(3, 1);
+  ui->gridLayoutVehiclesFire->setColumnStretch(4, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(0, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(1, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(2, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(3, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(4, 1);
+  ui->gridLayoutVehiclesFire->setRowStretch(5, 1);
+
+  ui->gridLayoutVehiclesEms->setColumnStretch(0, 1);
+  ui->gridLayoutVehiclesEms->setColumnStretch(1, 1);
+  ui->gridLayoutVehiclesEms->setColumnStretch(2, 1);
+  ui->gridLayoutVehiclesEms->setColumnStretch(3, 1);
+  ui->gridLayoutVehiclesEms->setColumnStretch(4, 1);
+  ui->gridLayoutVehiclesEms->setRowStretch(0, 1);
+  ui->gridLayoutVehiclesEms->setRowStretch(1, 1);
+  ui->gridLayoutVehiclesEms->setRowStretch(2, 1);
+  ui->gridLayoutVehiclesEms->setRowStretch(3, 1);
+
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(0, 60);
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(1, 60);
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(2, 60);
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(3, 60);
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(4, 60);
+  ui->gridLayoutVehiclesFire->setRowMinimumHeight(5, 60);
+  ui->gridLayoutVehiclesFire->setColumnMinimumWidth(0, 120);
+  ui->gridLayoutVehiclesFire->setColumnMinimumWidth(1, 120);
+  ui->gridLayoutVehiclesFire->setColumnMinimumWidth(2, 120);
+  ui->gridLayoutVehiclesFire->setColumnMinimumWidth(3, 120);
+  ui->gridLayoutVehiclesFire->setColumnMinimumWidth(4, 120);
+
+  ui->gridLayoutVehiclesEms->setRowMinimumHeight(0, 60);
+  ui->gridLayoutVehiclesEms->setRowMinimumHeight(1, 60);
+  ui->gridLayoutVehiclesEms->setRowMinimumHeight(2, 60);
+  ui->gridLayoutVehiclesEms->setRowMinimumHeight(3, 60);
+  ui->gridLayoutVehiclesEms->setColumnMinimumWidth(0, 120);
+  ui->gridLayoutVehiclesEms->setColumnMinimumWidth(1, 120);
+  ui->gridLayoutVehiclesEms->setColumnMinimumWidth(2, 120);
+  ui->gridLayoutVehiclesEms->setColumnMinimumWidth(3, 120);
+  ui->gridLayoutVehiclesEms->setColumnMinimumWidth(4, 120);
+
   QObject::connect(ui->pushButtonStatus0, &QPushButton::clicked, this, &VehicleWindow::status_button_clicked);
   QObject::connect(ui->pushButtonStatus1, &QPushButton::clicked, this, &VehicleWindow::status_button_clicked);
   QObject::connect(ui->pushButtonStatus2, &QPushButton::clicked, this, &VehicleWindow::status_button_clicked);

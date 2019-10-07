@@ -69,7 +69,7 @@ int Leitstelle::place_vehicles_in_window() {
 }
 
 void Leitstelle::update_vehicle_labels(int new_status) {
-  std::cout << "Status changed to " << new_status << std::endl;
+  //std::cout << "Status changed to " << new_status << std::endl;
   this->show_only_vehicles_with_status(new_status);
   //std::cout << "hi" << std::endl;
 }
@@ -83,10 +83,7 @@ int Leitstelle::show_only_vehicles_with_status(int status) {
   } else {
     for (const auto &entry : this->m_vehicle_labels) {
       VehicleLabel *label = entry.second;
-      if (label->get_status() != status)
-        label->setVisible(false);
-      else
-        label->setVisible(true);
+      label->setVisible(label->get_status() == status);
     }
   }
   return 0;
