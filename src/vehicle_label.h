@@ -15,7 +15,16 @@ class VehicleLabel : public QLabel {
 
  public:
   VehicleLabel(const QString &text, QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = Qt::WindowFlags()) :
-      QLabel(text, parent, f){}
+      QLabel(text, parent, f){
+  }
+  ~VehicleLabel() = default;
+
+  const std::string get_text();
+  void set_test(const std::string& text);
+
+  const int get_status();
+  void set_status(const int& status);
+
 
 };
 

@@ -18,10 +18,17 @@ class VehicleWindow : public QMainWindow {
   explicit VehicleWindow(QWidget *parent = nullptr);
   ~VehicleWindow();
 
- private slots:
+  int get_current_status_displayed();
+
+ public slots:
+  void status_button_clicked();
+
+ signals:
+  void status_displayed_changed(int new_status);
 
  private:
   Ui::VehicleWindow *ui;
+  int m_current_status_displayed;
 
 };
 

@@ -544,4 +544,7 @@ p, li { white-space: pre-wrap; }
  </widget>
  <resources/>
  <connections/>
+ <slots>
+  <slot>status_button_clicked()</slot>
+ </slots>
 </ui>

@@ -7,6 +7,7 @@
 #include "leitstelle.h"
 #include <QApplication>
 #include <QtCore/QFile>
+#include <unistd.h>
 
 int main(int argc, char *argv[]) {
 
@@ -19,6 +20,5 @@ int main(int argc, char *argv[]) {
   a.setStyleSheet(StyleSheet);
 
   auto* leitstelle = new Leitstelle();
-
   return QApplication::exec();
 }
