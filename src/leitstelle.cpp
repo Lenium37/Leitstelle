@@ -45,7 +45,7 @@ int Leitstelle::place_vehicles_in_window() {
     label->set_status(vehicle->get_status());
     int row = vehicle->get_position_in_list() / 6;
     int column = (vehicle->get_position_in_list() - 1) % 5;
-    auto* menu = new VehicleLabelMenu();
+    auto* menu = new VehicleLabelMenu(label);
     label->setContextMenuPolicy(Qt::CustomContextMenu);
     QObject::connect(label, SIGNAL(customContextMenuRequested(QPoint)), menu, SLOT(showMenu(QPoint)));
     this->m_vehicle_window->findChild<QGridLayout *>("gridLayoutVehiclesFire")->addWidget(label, row, column);
@@ -59,7 +59,7 @@ int Leitstelle::place_vehicles_in_window() {
     label->set_status(vehicle->get_status());
     int row = vehicle->get_position_in_list() / 6;
     int column = (vehicle->get_position_in_list() - 1) % 5;
-    auto* menu = new VehicleLabelMenu();
+    auto* menu = new VehicleLabelMenu(label);
     label->setContextMenuPolicy(Qt::CustomContextMenu);
     QObject::connect(label, SIGNAL(customContextMenuRequested(QPoint)), menu, SLOT(showMenu(QPoint)));
     this->m_vehicle_window->findChild<QGridLayout *>("gridLayoutVehiclesEms")->addWidget(label, row, column);

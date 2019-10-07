@@ -9,6 +9,8 @@
 VehicleWindow::VehicleWindow(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::VehicleWindow) {
   ui->setupUi(this);
+
+  // Make layout somewhat fixed
   ui->gridLayoutVehiclesFire->setColumnStretch(0, 1);
   ui->gridLayoutVehiclesFire->setColumnStretch(1, 1);
   ui->gridLayoutVehiclesFire->setColumnStretch(2, 1);
@@ -30,6 +32,7 @@ VehicleWindow::VehicleWindow(QWidget *parent) :
   ui->gridLayoutVehiclesEms->setRowStretch(1, 1);
   ui->gridLayoutVehiclesEms->setRowStretch(2, 1);
   ui->gridLayoutVehiclesEms->setRowStretch(3, 1);
+
 
   ui->gridLayoutVehiclesFire->setRowMinimumHeight(0, 60);
   ui->gridLayoutVehiclesFire->setRowMinimumHeight(1, 60);

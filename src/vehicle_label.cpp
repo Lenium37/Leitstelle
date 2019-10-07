@@ -4,6 +4,8 @@
 
 #include "vehicle_label.h"
 #include <QtXml> // ??? needed for setProperty to work
+#include <iostream>
+#include <QAction>
 
 const std::string VehicleLabel::get_text() {
   return this->m_text;
@@ -50,4 +52,45 @@ void VehicleLabel::set_status(const int &status) {
     default:
       break;
   }
+}
+
+void VehicleLabel::status_changed() {
+  auto* action = qobject_cast<QAction*>(sender());
+  if (!action) {
+    return;
+  }
+  int new_status = std::stoi(action->text().toStdString());
+  this->set_status(new_status);
+  switch(new_status) {
+    case 0:
+      this->setStyleSheet("background-color: rgb(255, 0, 0);");
+      break;
+    case 1:
+      this->setStyleSheet("background-color: rgb(200, 255, 255);");
+      break;
+    case 2:
+      this->setStyleSheet("background-color: rgb(0, 255, 0);");
+      break;
+    case 3:
+      this->setStyleSheet("background-color: rgb(255, 255, 0);");
+      break;
+    case 4:
+      this->setStyleSheet("background-color: rgb(255, 150, 0);");
+      break;
+    case 5:
+      this->setStyleSheet("background-color: rgb(255, 255, 255);");
+      break;
+    case 6:
+      this->setStyleSheet("background-color: rgb(90, 90, 90);");
+      break;
+    case 7:
+      this->setStyleSheet("background-color: rgb(0, 255, 255);");
+      break;
+    case 8:
+      this->setStyleSheet("background-color: rgb(0, 100, 255);");
+      break;
+    default:
+      break;
+  }
+
 }

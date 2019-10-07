@@ -6,16 +6,21 @@
 #define LEITSTELLE_SRC_VEHICLE_LABEL_MENU_H_
 
 #include <QMenu>
+#include "vehicle_label.h"
 
 class VehicleLabelMenu : public QMenu {
     Q_OBJECT
-   public:
-    explicit VehicleLabelMenu(QWidget *parent = 0);
+ public:
+  explicit VehicleLabelMenu(VehicleLabel *parent = 0);
 
-    signals:
+ signals:
 
-   public slots:
-        void showMenu(const QPoint &pos);
+ public slots:
+  void showMenu(const QPoint &pos);
+  void print_current_status();
+
+ private:
+  VehicleLabel* m_parent_label;
 
 };
 

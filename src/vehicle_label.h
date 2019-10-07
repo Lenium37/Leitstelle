@@ -26,6 +26,8 @@ class VehicleLabel : public QLabel {
   const int get_status();
   void set_status(const int& status);
 
+ public slots:
+  void status_changed();
 
 };
 
