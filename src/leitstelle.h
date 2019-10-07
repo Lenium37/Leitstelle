@@ -24,6 +24,7 @@ class Leitstelle : public QObject {
   int init();
   int read_vehicles_from_xml();
   int place_vehicles_in_window();
+  int show_only_vehicles_with_status(int status);
 
   std::map<const std::string, std::shared_ptr<Vehicle>> m_vehicles_fire;
   std::map<const std::string, std::shared_ptr<Vehicle>> m_vehicles_ems;

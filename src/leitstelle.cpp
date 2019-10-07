@@ -70,9 +70,27 @@ int Leitstelle::place_vehicles_in_window() {
 
 void Leitstelle::update_vehicle_labels(int new_status) {
   std::cout << "Status changed to " << new_status << std::endl;
+  this->show_only_vehicles_with_status(new_status);
   //std::cout << "hi" << std::endl;
 }
 
+int Leitstelle::show_only_vehicles_with_status(int status) {
+  if(status == -1) {
+    for(const auto& entry : this->m_vehicle_labels) {
+      VehicleLabel* label = entry.second;
+      label->setVisible(true);
+    }
+  } else {
+    for (const auto &entry : this->m_vehicle_labels) {
+      VehicleLabel *label = entry.second;
+      if (label->get_status() != status)
+        label->setVisible(false);
+      else
+        label->setVisible(true);
+    }
+  }
+  return 0;
+}
 
 Leitstelle::~Leitstelle() = default;
 
@@ -88,3 +106,4 @@ void Leitstelle::add_vehicle(std::shared_ptr<Vehicle> vehicle, bool is_fire) {
   if(is_fire)
     this->m_vehicles_fire.insert(std::pair<std::string, std::shared_ptr<Vehicle>>(vehicle->get_name(), vehicle));
 }
+

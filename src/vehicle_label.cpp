@@ -9,7 +9,7 @@ const std::string VehicleLabel::get_text() {
   return this->m_text;
 }
 
-void VehicleLabel::set_test(const std::string &text) {
+void VehicleLabel::set_text(const std::string &text) {
   this->m_text = text;
 }
 
