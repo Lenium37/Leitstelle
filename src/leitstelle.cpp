@@ -8,16 +8,21 @@
 #include <iostream>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QGroupBox>
 #include "unistd.h"
 
 Leitstelle::Leitstelle() {
   this->m_main_window = new MainWindow();
   this->m_vehicle_window = new VehicleWindow();
+  this->m_info_window = new InfoWindow();
 
-  this->init();
   this->m_main_window->setWindowState(Qt::WindowMaximized);
   this->m_vehicle_window->setWindowState(Qt::WindowMaximized);
-  this->m_vehicle_window->show();
+  this->m_info_window->setWindowState(Qt::WindowMaximized);
+
+  this->init();
+  //this->m_vehicle_window->show();
+  this->m_info_window->show();
 }
 
 int Leitstelle::init() {

@@ -19,6 +19,8 @@ set(main_headers
         xml_vehicle_list_reader.h
         vehicle_label.h
         vehicle_label_menu.h
+        info_window.h
+        digital_clock.h
         )
 
 set(main_srcs
@@ -30,11 +32,13 @@ set(main_srcs
         xml_vehicle_list_reader.cpp
         vehicle_label.cpp
         vehicle_label_menu.cpp
+        info_window.cpp
         )
 
 set(main_ui
         main_window.ui
         vehicle_window.ui
+        info_window.ui
         )
 
 qt5_add_resources(RESOURCE_FILES resources/resources.qrc)
