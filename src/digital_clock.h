@@ -1,0 +1,8 @@
+//
+// Created by Johannes on 09.10.2019.
+//
+
+#ifndef LEITSTELLE_SRC_DIGITAL_CLOCK_H_
+#define LEITSTELLE_SRC_DIGITAL_CLOCK_H_
+
+#endif //LEITSTELLE_SRC_DIGITAL_CLOCK_H_
