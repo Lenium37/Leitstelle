@@ -11,6 +11,7 @@
 #include "vehicle_label.h"
 #include "vehicle_label_menu.h"
 #include "info_window.h"
+#include "crew_window.h"
 
 class Leitstelle : public QObject {
 
@@ -20,7 +21,7 @@ class Leitstelle : public QObject {
   MainWindow* m_main_window;
   VehicleWindow* m_vehicle_window;
   InfoWindow* m_info_window;
-  //MessageWindow m_message_window;
+  CrewWindow* m_crew_window;
 
   int init();
   int read_vehicles_from_xml();

@@ -8,5 +8,6 @@
     <file>info_notfallpraxis-kinder.txt</file>
     <file>info_tieraerztlicher-notdienst.txt</file>
     <file>info_zahnaerztlicher-notdienst.txt</file>
+    <file>crew.txt</file>
 </qresource>
 </RCC>

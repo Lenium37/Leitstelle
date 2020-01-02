@@ -21,6 +21,7 @@ set(main_headers
         vehicle_label_menu.h
         info_window.h
         digital_clock.h
+        crew_window.h
         )
 
 set(main_srcs
@@ -33,12 +34,14 @@ set(main_srcs
         vehicle_label.cpp
         vehicle_label_menu.cpp
         info_window.cpp
+        crew_window.cpp
         )
 
 set(main_ui
         main_window.ui
         vehicle_window.ui
         info_window.ui
+        crew_window.ui
         )
 
 qt5_add_resources(RESOURCE_FILES resources/resources.qrc)

@@ -15,14 +15,17 @@ Leitstelle::Leitstelle() {
   this->m_main_window = new MainWindow();
   this->m_vehicle_window = new VehicleWindow();
   this->m_info_window = new InfoWindow();
+  this->m_crew_window = new CrewWindow();
 
   this->m_main_window->setWindowState(Qt::WindowMaximized);
   this->m_vehicle_window->setWindowState(Qt::WindowMaximized);
   this->m_info_window->setWindowState(Qt::WindowMaximized);
+  this->m_crew_window->setWindowState(Qt::WindowMaximized);
 
   this->init();
-  //this->m_vehicle_window->show();
+  this->m_vehicle_window->show();
   this->m_info_window->show();
+  this->m_crew_window->show();
 }
 
 int Leitstelle::init() {
