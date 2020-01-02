@@ -63,7 +63,7 @@ bool XmlVehicleListReader::read(QIODevice *device, std::map<const std::string, s
         }
       }
     } else {
-      reader.raiseError(QObject::tr("Not a lightshow file"));
+      reader.raiseError(QObject::tr("Not a vehicle file"));
     }
   }
 

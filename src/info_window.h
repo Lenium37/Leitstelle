@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::InfoWindow *ui;
+    void insert_info_texts();
 };
 
 #endif // INFO_WINDOW_H
