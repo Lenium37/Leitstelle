@@ -20,6 +20,11 @@
       <property name="title">
        <string>Augenärztlicher Notdienst</string>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QTextBrowser" name="info5"/>
@@ -31,6 +36,11 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>Notfallpraxis Langenfeld / Monheim / LEV-Hitdorf</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
@@ -44,6 +54,11 @@
       <property name="title">
        <string>Zahnärztlicher Notdienst</string>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
         <widget class="QTextBrowser" name="info4"/>
@@ -55,6 +70,11 @@
      <widget class="QGroupBox" name="groupBox_3">
       <property name="title">
        <string>Apotheken-Notdienst</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
@@ -68,6 +88,11 @@
       <property name="title">
        <string>Kinderärztliche Notfallpraxis Langenfeld</string>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QTextBrowser" name="info2"/>
@@ -80,9 +105,15 @@
       <property name="title">
        <string>Tierärztlicher Notdienst</string>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QTextBrowser" name="info6"/>
+        <widget class="QTextBrowser" name="info6">
+            </widget>
        </item>
       </layout>
      </widget>

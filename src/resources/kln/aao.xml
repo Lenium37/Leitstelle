@@ -1,0 +1,46 @@
+<stichwoerter>
+	<stichwort>
+		<name>Feuer 1</name>
+		<name_acronym>FEU1</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+		</vehicles>
+	</stichwort>
+	<stichwort>
+		<name>Feuer 2</name>
+		<name_acronym>FEU2</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+			<vehicle>LF 10</vehicle>
+		</vehicles>
+	</stichwort>
+	<stichwort>
+		<name>Person im Rhein</name>
+		<name_acronym>PRHEIN</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+			<vehicle>MTF</vehicle>
+		</vehicles>
+	</stichwort>
+	<stichwort>
+		<name>Kleinfeuer</name>
+		<name_acronym>KleinFeu</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+		</vehicles>
+	</stichwort>
+	<stichwort>
+		<name>Mülleimerbrand</name>
+		<name_acronym>MÜLL</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+		</vehicles>
+	</stichwort>
+	<stichwort>
+		<name>Ölspur</name>
+		<name_acronym>ÖL</name_acronym>
+		<vehicles>
+			<vehicle>LF 10</vehicle>
+		</vehicles>
+	</stichwort>
+</stichwoerter>

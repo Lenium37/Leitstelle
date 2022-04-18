@@ -19,6 +19,9 @@ private:
     Ui::InfoWindow *ui;
     void insert_info_texts();
 
+private slots:
+    void toggle_fullscreen();
+
 };
 
 #endif // INFO_WINDOW_H

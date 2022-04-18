@@ -18,8 +18,9 @@ class DigitalClock : public QLCDNumber
   //DigitalClock(QWidget *parent = nullptr);
   DigitalClock(QWidget *parent = nullptr) : QLCDNumber(parent) {
     this->setDigitCount(8);
-    setSegmentStyle(Filled);
-    this->setStyleSheet("font-size: 20px;");
+    this->setSegmentStyle(Flat);
+    this->setFrameShape(QFrame::NoFrame);
+    this->setMinimumHeight(50);
 
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &DigitalClock::showTime);
@@ -36,8 +37,6 @@ class DigitalClock : public QLCDNumber
         QTime time = QTime::currentTime();
         QString text = time.toString("hh:mm:ss");
         this->display(text);
-
-        //display("20:24:22");
   };
 };
 

@@ -48,14 +48,15 @@ bool XmlVehicleListReader::read(QIODevice *device, std::map<const std::string, s
                   reader.skipCurrentElement();
               }
             }
-            std::shared_ptr<Vehicle> vehicle = std::make_shared<Vehicle>(enabled, city_callout, vehicle_callout, type, status, position_in_list);
-            if(is_fire) {
-              //std::cout << "adding fire vehicle " << vehicle->get_name() << std::endl;
-              vehicles_fire.insert(std::pair<std::string, std::shared_ptr<Vehicle>>(vehicle->get_name(), vehicle));
-            }
-            else {
-              //std::cout << "adding ems vehicle " << vehicle->get_name() << std::endl;
-              vehicles_ems.insert(std::pair<std::string, std::shared_ptr<Vehicle>>(vehicle->get_name(), vehicle));
+            if (enabled) {
+              std::shared_ptr<Vehicle> vehicle = std::make_shared<Vehicle>(enabled, city_callout, vehicle_callout, type, status, position_in_list);
+              if(is_fire) {
+                vehicles_fire.insert(std::pair<std::string, std::shared_ptr<Vehicle>>(vehicle->get_name(), vehicle));
+              }
+              else {
+                //std::cout << "adding ems vehicle " << vehicle->get_name() << std::endl;
+                vehicles_ems.insert(std::pair<std::string, std::shared_ptr<Vehicle>>(vehicle->get_name(), vehicle));
+              }
             }
           } else {
             reader.skipCurrentElement();
@@ -67,7 +68,46 @@ bool XmlVehicleListReader::read(QIODevice *device, std::map<const std::string, s
     }
   }
 
-  //this->lightshow->set_length((this->max_time * 40) + 2);
   device->close();
   return !reader.error();
 }
+
+bool XmlVehicleListReader::read_aao(QIODevice *device, std::map<const std::string, std::vector<Vehicle>>& m_aao) {
+  QXmlStreamReader reader;
+  reader.setDevice(device);
+
+  if (reader.readNextStartElement()) {
+    if (reader.name() == "stichwoerter") {
+      while (reader.readNextStartElement()) {
+        if (reader.name() == "stichwort") {
+          std::string name, name_acronym;
+          std::vector<Vehicle> vehicles;
+
+          while (reader.readNextStartElement()) {
+            if (reader.name() == "name") {
+              name = reader.readElementText().toStdString();
+            } else if(reader.name() == "name_acronym") {
+              name_acronym = reader.readElementText().toStdString();
+            } else if(reader.name() == "vehicles") {
+              while (reader.readNextStartElement()) {
+                std::string vehicle = reader.readElementText().toStdString();
+                vehicles.push_back(Vehicle(false, "", vehicle, vehicle, 1, 0));
+              }
+            } else {
+                reader.skipCurrentElement();
+            }
+          }
+          m_aao.insert(std::pair<const std::string, std::vector<Vehicle>>(name_acronym, vehicles));
+
+        } else {
+            reader.skipCurrentElement();
+        }
+      }
+    } else {
+      reader.raiseError(QObject::tr("Not an AAO file"));
+    }
+  }
+
+  device->close();
+  return !reader.error();
+  }

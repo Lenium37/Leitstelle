@@ -3,12 +3,17 @@
 #include "info_window.h"
 #include "ui_info_window.h"
 #include "digital_clock.h"
+#include <QtWidgets/QShortcut>
 
 InfoWindow::InfoWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::InfoWindow)
 {
-  ui->setupUi(this);
+  ui->setupUi(this);  
+  
+  QShortcut * toggleFuillscreenShortcut = new QShortcut(QKeySequence("F11"), this);
+  QObject::connect(toggleFuillscreenShortcut, SIGNAL(activated()), this, SLOT(toggle_fullscreen()));
+
 
   // add clock
   auto* info_clock = new DigitalClock();
@@ -73,4 +78,8 @@ void InfoWindow::insert_info_texts() {
   this->findChild<QTextBrowser *>("info6")->setFrameStyle(QFrame::NoFrame);
   this->findChild<QTextBrowser *>("info6")->setText(in6.readAll());
 
+}
+
+void InfoWindow::toggle_fullscreen() {
+  isFullScreen() ? showMaximized() : showFullScreen();
 }

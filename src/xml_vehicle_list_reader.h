@@ -14,6 +14,7 @@ class XmlVehicleListReader {
   XmlVehicleListReader();
   ~XmlVehicleListReader();
   static bool read(QIODevice *device, std::map<const std::string, std::shared_ptr<Vehicle>>& vehicles_fire, std::map<const std::string, std::shared_ptr<Vehicle>>& vehicles_ems);
+  static bool read_aao(QIODevice *device, std::map<const std::string, std::vector<Vehicle>>& m_aao);
 
 };
 

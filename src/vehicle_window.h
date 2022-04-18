@@ -30,6 +30,9 @@ class VehicleWindow : public QMainWindow {
   Ui::VehicleWindow *ui;
   int m_current_status_displayed;
 
+  private slots:
+    void toggle_fullscreen();
+
 };
 
 #endif //LEITSTELLE_SRC_VEHICLE_WINDOW_H_

@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>styles.qss</file>
+    <file>vehicles.xml</file>
+    <file>info_apotheken-notdienst.txt</file>
+    <file>info_augenaerztlicher-notdienst.txt</file>
+    <file>info_notfallpraxis.txt</file>
+    <file>info_notfallpraxis-kinder.txt</file>
+    <file>info_tieraerztlicher-notdienst.txt</file>
+    <file>info_zahnaerztlicher-notdienst.txt</file>
+    <file>crew.txt</file>
+</qresource>
+</RCC>

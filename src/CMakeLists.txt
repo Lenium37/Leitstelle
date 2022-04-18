@@ -14,6 +14,8 @@ find_package(Qt5Xml REQUIRED)
 set(main_headers
         vehicle_window.h
         main_window.h
+        leitstellenwindow.h
+        alarm_dialog.h
         vehicle.h
         leitstelle.h
         xml_vehicle_list_reader.h
@@ -21,12 +23,16 @@ set(main_headers
         vehicle_label_menu.h
         info_window.h
         digital_clock.h
+        digital_timer.h
         crew_window.h
+        alarm_window.h
         )
 
 set(main_srcs
         main.cpp
         main_window.cpp
+        leitstellenwindow.cpp
+        alarm_dialog.cpp
         vehicle_window.cpp
         vehicle.cpp
         leitstelle.cpp
@@ -35,6 +41,7 @@ set(main_srcs
         vehicle_label_menu.cpp
         info_window.cpp
         crew_window.cpp
+        alarm_window.cpp
         )
 
 set(main_ui
@@ -42,9 +49,12 @@ set(main_ui
         vehicle_window.ui
         info_window.ui
         crew_window.ui
+        leitstellenwindow.ui
+        alarm_dialog.ui
+        alarm_window.ui
         )
 
-qt5_add_resources(RESOURCE_FILES resources/resources.qrc)
+qt5_add_resources(RESOURCE_FILES resources/kln/resources.qrc)
 
 set(UI_EXECUTABLE_NAME ${PROJECT_NAME})
 

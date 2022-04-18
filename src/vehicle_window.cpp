@@ -5,10 +5,14 @@
 #include <iostream>
 #include "vehicle_window.h"
 #include "ui_vehicle_window.h"
+#include <QtWidgets/QShortcut>
 
 VehicleWindow::VehicleWindow(QWidget *parent) :
     QMainWindow(parent), ui(new Ui::VehicleWindow) {
   ui->setupUi(this);
+
+  QShortcut * toggleFuillscreenShortcut = new QShortcut(QKeySequence("F11"), this);
+  QObject::connect(toggleFuillscreenShortcut, SIGNAL(activated()), this, SLOT(toggle_fullscreen()));
 
   // Make layout somewhat fixed
   ui->gridLayoutVehiclesFire->setColumnStretch(0, 1);
@@ -102,5 +106,9 @@ void VehicleWindow::status_button_clicked() {
 
 int VehicleWindow::get_current_status_displayed() {
   return this->m_current_status_displayed;
+}
+
+void VehicleWindow::toggle_fullscreen() {
+  isFullScreen() ? showMaximized() : showFullScreen();
 }
 

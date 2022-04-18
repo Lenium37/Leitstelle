@@ -1,0 +1,30 @@
+<vehicles>
+	<fire>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. KLN</cityCallout>
+			<vehicleCallout>90-LF10-1</vehicleCallout>
+			<vehicleType>LF 10</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+			<positionInList>3</positionInList>
+		</vehicle>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. KLN</cityCallout>
+			<vehicleCallout>90-LF10-2</vehicleCallout>
+			<vehicleType>LF 10</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+			<positionInList>4</positionInList>
+		</vehicle>
+		<vehicle>
+			<enabled>1</enabled>
+			<cityCallout>Flo. KLN</cityCallout>
+			<vehicleCallout>90-MTF-1</vehicleCallout>
+			<vehicleType>MTF</vehicleType>
+			<vehicleStatus>2</vehicleStatus>
+			<positionInList>20</positionInList>
+		</vehicle>
+	</fire>
+	<ems>
+	</ems>
+</vehicles>
